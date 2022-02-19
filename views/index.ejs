@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <form action="/uploadImage" method="POST" enctype="multipart/form-data">
-      <input type="file" name="image">
-      <input type="submit">
-    </form>
-  </body>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+
+<body>
+  <form action="/uploadImage" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image">
+    <input type="submit">
+  </form>
+  <input type="file" name="image" id="fileUpload" />  <!--event listner-->
+  <script type="text/javascript" src="/javascript/script.js"></script>
+  <input type="file" name="image" id="fileUpload2" onChange="imgup(event)" />  <!--call function-->
+</body>
+
 </html>
